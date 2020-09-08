@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculadora de descontos"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:id="@+id/titulo"/>
+ />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/titulo"
+        android:id="@+id/nome_usuario"
+        android:hint="Digite seu nome"
+        android:textSize="30sp"
+        android:inputType="text"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/nome_usuario"
+        android:id="@+id/salario"
+        android:hint="Digite seu salário bruto"
+        android:textSize="30sp"
+        android:inputType="numberDecimal"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/salario"
+        android:id="@+id/vt"
+        android:hint="Valor total da sua locomoção"
+        android:textSize="30sp"
+        android:inputType="numberDecimal"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Validar informações"
+        android:textSize="20sp"
+        android:id="@+id/validar"
+        app:layout_constraintTop_toBottomOf="@+id/vt"
+        android:onClick="validar"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Calcular descontos"
+        android:textSize="20sp"
+        android:id="@+id/calcular"
+        app:layout_constraintTop_toBottomOf="@+id/validar"
+        android:onClick="mensagem"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/calcular"
+        android:text="valido"
+        android:textSize="35sp"
+        android:id="@+id/tv_valido"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_valido"
+        android:text="resultado"
+        android:textSize="35sp"
+        android:id="@+id/tv_resultado"
+        android:visibility="invisible"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
